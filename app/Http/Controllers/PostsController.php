@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Enums\PostState;
 
 class PostsController extends Controller
 {
@@ -19,5 +20,9 @@ class PostsController extends Controller
 
     public function store() {
         return view('posts/create');
+    }
+
+    public function state(PostState $state) {
+        return $state->value;
     }
 }
