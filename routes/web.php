@@ -19,8 +19,5 @@ Route::get('/', function () {
 });
 
 // group by controller
-Route::controller(PostsController::class)->group(function() {
-    Route::get('/posts', 'index')->name('posts');
-    Route::get('/posts/{post}', 'show')->name('post');
-    Route::post('/posts', 'store')->name('post-create');
-});
+Route::get('/users/{user}/posts/{post:id}', [PostsController::class, 'show'])
+    ->name('show-post')->scopeBindings();
