@@ -10,7 +10,7 @@ class PostsController extends Controller
 {
     //
     public function index() {
-        return view('posts/index');
+        return Post::search('Ipsa')->get();
     }
 
     public function show(User $user, Post $post) {

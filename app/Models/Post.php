@@ -4,13 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'title',
         'body'
     ];
+
+    public function toSearchableArray() {
+        return [
+            'title' => $this->title,
+            'body' => $this->body
+        ];
+    }
 }
