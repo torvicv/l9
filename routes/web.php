@@ -21,7 +21,6 @@ Route::get('/', function () {
 
 Route::get('/posts', [PostsController::class, 'index']);
 
-// group by controller
 Route::get('/users/{user}/posts/{post:id}', [PostsController::class, 'show'])
     ->name('show-post')->scopeBindings();
 

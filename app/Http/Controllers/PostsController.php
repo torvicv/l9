@@ -15,7 +15,7 @@ class PostsController extends Controller
     }
 
     public function show(User $user, Post $post) {
-        return $post;
+        return view('posts/show');
     }
 
     public function store() {
