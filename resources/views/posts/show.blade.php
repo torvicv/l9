@@ -9,7 +9,7 @@
 @endpush
 
 @section('content')
-    <a class="img-1" data-cursor="pointer-2">Post goes here
+    <a href="https://google.com" class="img-1" data-cursor="pointer-2">Post goes here
         <div class="ball">
             <div class="img-2"></div>
         </div>
