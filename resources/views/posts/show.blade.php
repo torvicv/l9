@@ -9,11 +9,25 @@
 @endpush
 
 @section('content')
-    <a href="https://google.com" class="img-1" data-cursor="pointer-2">Post goes here
-        <div class="ball">
-            <div class="img-2"></div>
+<div>
+    <div class="content">
+        <h1>Post</h1>
+        <div>
+            <a href="https://google.com" class="img-1" data-cursor="pointer-2">
+                Post goes here
+            </a>
         </div>
-    </a>
+        <a href="https://google.com" class="img-1 fixed-position" data-cursor="pointer-2">
+            Go out
+        </a>
+        <a href="https://google.com" class="img-1 fixed-position2" data-cursor="pointer-2">
+            Go in
+        </a>
+    </div>
+</div>
+<div class="ball">
+    <div class="img-2"></div>
+</div>
 @endsection
 
 
